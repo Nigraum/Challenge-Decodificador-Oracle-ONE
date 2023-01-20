@@ -1,7 +1,9 @@
-body {
+body{
   font-family: 'Inter', sans-serif;
-  background: #E5E5E5;
+  /*background: #E5E5E5;*/
+  background: linear-gradient( 180deg, #FFFFFF, #E5E5E5, #E5E5E5, #0A3871);
   font-size: 12px;
+  /*width: 100vw;*/
   height: 90vh;
   margin: 5vh 0 5vh 0;
   padding: 0;
@@ -21,21 +23,22 @@ main {
   justify-content: center;
 }
 
-.input-texts {
+.secao1 {
   flex-basis: 65%;
 }
 
-.output-text {
+.secao2 {
   flex-basis: 30%;
-    height: 90vh;
-    background: #FFFFFF;
-    border-radius: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 90vh;
+  background: #FFFFFF;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.main-text {
+/*Estilizando área que o usuario irá digitar o texto*/
+.inputs {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -45,13 +48,14 @@ main {
   max-width: 60vw;
 }
 
-div .input-text {
+div .input-texto {
   width: 100%;
   margin-bottom: 2em;
   position: relative;
+
 }
 
-div .input-text label {
+div .input-texto label {
   font-size: 2.5em;
   position: absolute;
   top: 0;
@@ -61,7 +65,7 @@ div .input-text label {
   transition: 0.5s ease-in-out;
 }
 
-div .input-text .area-text {
+div .input-texto .area-texto {
   width: 50vw;
   height: 10vh;
   resize: none;
@@ -73,25 +77,26 @@ div .input-text .area-text {
   transition: 1s ease-in-out;
 }
 
-div .input-text .area-text:focus {
+div .input-texto .area-texto:focus {
   height: 60vh;
 }
 
-div .input-text .area-text:focus ~ label,
-div .input-text .area-text:valid ~ label {
+div .input-texto .area-texto:focus ~ label,
+div .input-texto .area-texto:valid ~ label {
   transform: translateY(-5.5vh);
   font-size: 2em;
 }
 
-.main-text p img {
+.inputs p img {
   margin-right: 0.5em;
 }
 
-.main-text p {
+.inputs p {
   margin-left: 0;
 }
 
-.buttons {
+/*Estilizando botões*/
+.botoes-interacao {
   width: 100%;
   height: 6em;
   display: flex;
@@ -101,17 +106,17 @@ div .input-text .area-text:valid ~ label {
   margin-top: 1em;
 }
 
-.btn-criptografar {
+.botao-crip {
   background: #0A3871;
-  color: white;
+  color: #FFFFFF;
 }
 
-.btn-desencriptografar {
-  background: white;
+.botao-descrip {
+  background: #FFFFFF;
   color: #0A3871;
 }
 
-.btn-criptografar, .btn-desencriptografar {
+.botao-crip, .botao-descrip {
   padding: 2%;
   width: 35%;
   height: 90%;
@@ -121,7 +126,9 @@ div .input-text .area-text:valid ~ label {
   cursor: pointer;
 }
 
-.default-msg {
+/*estilização inicial da parte do resultado*/
+
+.sem-mensagem {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -133,25 +140,25 @@ div .input-text .area-text:valid ~ label {
   box-sizing: border-box;
 }
 
-.default-image {
+.img-resultado {
   width: 100%;
 }
 
-.default-text {
+.texto-inicial-resultado {
   margin: 5%;
 }
 
-.default-msg h2 {
+.sem-mensagem h2 {
   font-weight: bold;
   font-size: 1.8em;
-  margin: 10%;
+  margin-bottom: 10%;
 }
 
-.default-msg p {
-  font: 1.2em;
+.sem-mensagem p {
+  font-size: 1.2em;
 }
 
-.final {
+.resultado {
   text-align: center;
   width: 100%;
   height: 100%;
@@ -159,7 +166,7 @@ div .input-text .area-text:valid ~ label {
   padding-bottom: 1em;
 }
 
-.output-final {
+.area-resultado {
   height: 70vh;
   width: 100%;
   resize: none;
@@ -172,7 +179,7 @@ div .input-text .area-text:valid ~ label {
   box-sizing: border-box;
 }
 
-.btn-copy {
+.botao-copiar {
   padding: 1%;
   width: 70%;
   height: 8vh;
@@ -183,7 +190,7 @@ div .input-text .area-text:valid ~ label {
   color: #0A3871;
 }
 
-.final-default {
+.esconder2 {
   height: 100%;
   display: none;
   flex-wrap: wrap;
@@ -194,14 +201,161 @@ div .input-text .area-text:valid ~ label {
   box-sizing: border-box;
 }
 
-footer {
+/*Estilizando rodapé*/
+footer div {
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin: 5vh 0 0 0;
   text-align: center;
   background: #0A3871;
   height: 10vh;
   font-size: 1.2em;
   color: #D8DFE8;
+}
+
+@media  screen and (max-width: 800px), (max-height: 420px) {
+  body {
+      font-size: 10px;
+      margin: 1vh 1vw;
+      width: 100vw;
+      height: 100%;
+  }
+
+  .principal {
+      width: 98vw;
+  }
+
+  .interacoes {
+      display: block;
+      width: 100%;
+      margin-top: 0;
+  }
+
+  header h1 {
+      margin-left: 0.5em;
+      display: block;
+      float: none;
+  }
+
+  header h1 img {
+      width: 1.5em;
+      margin-left: 0;
+  }
+
+  .secao1 {
+      display: block;
+      margin-bottom: 5px;
+      margin-left: 4%;
+      width: 90%;
+      height: 100%;
+  }
+  
+  .secao2 {
+      display: block;
+      height: auto;
+      margin: 2em 1em;
+      border-radius: 15px;
+  }
+
+  .inputs {
+      display: block;
+      width: 95vw;
+      max-width: 95vw;
+      margin-top: 0.5em;
+  }
+
+  form {
+      width: 99%;
+      margin: 1em 0;
+  }
+
+  div .input-texto .area-texto {
+      width: 95%;
+      height: 50vh;
+  }
+
+  div .input-texto .area-texto:focus {
+      height: 50vh;
+  }
+
+  div .input-texto .area-texto:focus ~ label,
+  div .input-texto .area-texto:valid ~ label {
+      font-size: 0;
+  }
+
+  .inputs p {
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+  }
+
+  .botoes-interacao {
+      display: block;
+      height: 100%;
+  }
+
+  .botao-crip, .botao-descrip {
+      display: block;
+      padding: 0;
+      width: 90vw;
+      height: 8vh;
+      margin-top: 1%;
+      margin-right: 0;
+      margin-left: 0;
+      margin-top: 1%;
+      font-size: 1.5em;
+  }
+
+  .botao-descrip {
+      margin-top: 5%;
+      background: #FFFFFF;
+  }
+
+  .sem-mensagem {
+      height: 100%;
+      margin-top: 10%;
+      padding: 20px;
+  }
+
+  .texto-inicial-resultado {
+      margin: 0;
+  }
+
+  .sem-mensagem img {
+      display: none;
+  }
+
+  .area-resultado {
+      height: 50vh;
+  }
+
+  .botao-copiar {
+      background: #FFFFFF;
+  }
+
+  footer div {
+      background: none;
+      margin-top: 1em;
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
+
+@media  screen and (max-height: 799px) {
+  div .input-texto .area-texto {
+      width: 95%;
+      height: 45vh;
+  }
+
+  div .input-texto .area-texto:focus {
+      height: 45vh;
+  }
+
+  .botao-descrip {
+      margin-top: 2%;
+      background: #FFFFFF;
+  }
+
 }

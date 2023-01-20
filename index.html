@@ -1,66 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/styles.css">
-  <link rel="stylesheet" href="./assets/reset.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <title>Decodificador</title>
-</head>
-<body>
-  <header>
-    <h1><img class="logo" src="./assets/imgs/logo.svg" alt="Logo Alura"></h1>
-  </header>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <main>
-    <div class="input-texts">
-      <section class="main-text">
-        <form>
-          <div class="input-text">
-            <textarea type="text" id="area" class="area-text" wrap="hard" required></textarea>
-            <label for="area"></label>
-          </div>
-          <p><img src="./assets/imgs/bi_exclamation-circle-fill.svg" alt="Icone exclamação">Apenas Letra minúsculas e sem acento.</p>
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-          <div class="buttons">
-            <input type="button" value="Criptografar" class="btn-criptografar">
-            <input type="button" value="Desencriptogrfar" class="btn-desencriptografar">
-          </div>
-        </form>
-      </section>
-    </div>
+        <link rel="stylesheet" type="text/css" href="./assets/reset.css">
+        <link rel="stylesheet" type="text/css" href="./assets/styles.css">
 
-    <div class="output-text">
-      <div class="default">
-        <section class="default-msg">
-          <img src="./assets/imgs/image_default.svg" class="default-image" alt="Sem mensagens">
-          <div class="default-text">
-            <h2>Nenhuma mensagem encontrada</h2>
-            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-          </div>
-        </section>
-      </div>
+        <title>Decodificador</title>
+    </head>
+    <body class="principal">
+        <header>
+            <h1><img src="./assets/imgs/logo.svg"></h1>
+        </header>
+        <main class="interacoes">
+            <div class="secao1">
+                <section class="inputs">
+                    <form>
+                        <!--campo para o texto que vai ser criptografado/descriptografado-->
+                        <div class="input-texto">
+                            <textarea type="text" id="area" class="area-texto" wrap="hard" required></textarea>
+                            <label for="area">Digite o seu texto</label>
+                        </div>
+                        <p><img src="./assets/imgs/bi_exclamation-circle-fill.svg">Apenas letras minúsculas e sem acento.</p>
+                        <!--botões para criptografar/descriptografar-->
+                        <div class="botoes-interacao">
+                            <input type="button" value="Criptografar" class="botao-crip">
+                            <input type="button" value="Descriptografar" class="botao-descrip">
+                        </div>
+                    </form>
+                </section>
+            </div>
 
-      <div class="final-default">
-        <section class="final">
-          <div>
-            <label for="final-output">Resultado</label>
-            <textarea type="text" id="final-output" class="output-final" wrap="hard" ></textarea>
+            <div class="secao2">
+                <div class="esconder1">
+                    <section class="sem-mensagem">
+                        
+                        <img src="./assets/imgs/image_default.svg" class="img-resultado">
 
-            <button class="btn-copy">Copiar</button>
-          </div>
-        </section>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <p>Yan Corintima - 2023</p>
-  </footer>
-  
-</body>
+                        <div class="texto-inicial-resultado">
+                            <h2>Nenhuma mensagem encontrada</h2>
+                            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                        </div>
+                    </section>
+                </div>
+                <!-- -->
+                <div class="esconder2">
+                    <section class="resultado">
+                            <div>
+                                <label for="area-result">Resultado</label>
+                                <textarea type="text" id="area-result" class="area-resultado" wrap="hard"></textarea>
+                            
+                                <button class="botao-copiar">Copiar</button>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>&copy; Yan Corintima - 2023</p>
+            </div>
+        </footer>
+        <script src="./script/script.js"></script>
+    </body>
 </html>
