@@ -1,11 +1,207 @@
 body {
   font-family: 'Inter', sans-serif;
-  background: #e5e5e5;
+  background: #E5E5E5;
+  font-size: 12px;
   height: 90vh;
   margin: 5vh 0 5vh 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header h1 {
   float: left;
   margin-left: 3.5vw;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-texts {
+  flex-basis: 65%;
+}
+
+.output-text {
+  flex-basis: 30%;
+    height: 90vh;
+    background: #FFFFFF;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 4em;
+  width: 100%;
+  max-width: 60vw;
+}
+
+div .input-text {
+  width: 100%;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+div .input-text label {
+  font-size: 2.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #0A3871;
+  cursor: text;
+  transition: 0.5s ease-in-out;
+}
+
+div .input-text .area-text {
+  width: 50vw;
+  height: 10vh;
+  resize: none;
+  border: none;
+  background: none;
+  font-size: 2.5em;
+  color: #0A3871;
+  outline: 0;
+  transition: 1s ease-in-out;
+}
+
+div .input-text .area-text:focus {
+  height: 60vh;
+}
+
+div .input-text .area-text:focus ~ label,
+div .input-text .area-text:valid ~ label {
+  transform: translateY(-5.5vh);
+  font-size: 2em;
+}
+
+.main-text p img {
+  margin-right: 0.5em;
+}
+
+.main-text p {
+  margin-left: 0;
+}
+
+.buttons {
+  width: 100%;
+  height: 6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1em;
+}
+
+.btn-criptografar {
+  background: #0A3871;
+  color: white;
+}
+
+.btn-desencriptografar {
+  background: white;
+  color: #0A3871;
+}
+
+.btn-criptografar, .btn-desencriptografar {
+  padding: 2%;
+  width: 35%;
+  height: 90%;
+  margin-right: 10%;
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.default-msg {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10%;
+  box-sizing: border-box;
+}
+
+.default-image {
+  width: 100%;
+}
+
+.default-text {
+  margin: 5%;
+}
+
+.default-msg h2 {
+  font-weight: bold;
+  font-size: 1.8em;
+  margin: 10%;
+}
+
+.default-msg p {
+  font: 1.2em;
+}
+
+.final {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.output-final {
+  height: 70vh;
+  width: 100%;
+  resize: none;
+  border: none;
+  background: none;
+  font-size: 2em;
+  color: #495057;
+  outline: 0;
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+}
+
+.btn-copy {
+  padding: 1%;
+  width: 70%;
+  height: 8vh;
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #0A3871;
+}
+
+.final-default {
+  height: 100%;
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0 0 0;
+  text-align: center;
+  background: #0A3871;
+  height: 10vh;
+  font-size: 1.2em;
+  color: #D8DFE8;
 }
