@@ -1,0 +1,11 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #e5e5e5;
+  height: 90vh;
+  margin: 5vh 0 5vh 0;
+}
+
+header h1 {
+  float: left;
+  margin-left: 3.5vw;
+}
