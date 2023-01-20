@@ -12,36 +12,54 @@
 </head>
 <body>
   <header>
-    <img class="logo" src="./assets/imgs/Frame 6.png" alt="Logo Alura">
+    <img class="logo" src="./assets/imgs/logo.svg" alt="Logo Alura">
   </header>
 
   <main>
-    <section>
-      <textarea class="encriptar" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
-  
-      <div class="info">
-        <p>Apenas letrar minusculas e sem acento.</p>
+    <div class="input-texts">
+      <section class="main-text">
+        <form>
+          <div class="input-text">
+            <textarea type="text" id="area" class="area-text" wrap="hard" required></textarea>
+            <label for="area"></label>
+          </div>
+          <p><img src="./assets/imgs/bi_exclamation-circle-fill.svg" alt="Icone exclamação">Apenas Letra minúsculas e sem acento.</p>
+
+          <div class="buttons">
+            <input type="button" value="Criptografar" class="btn-criptografar">
+            <input type="button" value="Desencriptogrfar" class="btn-desencriptografar">
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div class="output-text">
+      <div class="default">
+        <section class="default-image">
+          <img src="./assets/imgs/image_default.svg" alt="Sem mensagens">
+          <div class="default-text">
+            <h2>Nenhuma mensagem encontrada</h2>
+            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+          </div>
+        </section>
       </div>
-  
-      <div class="buttons">
-        <button class="btn-encriptar">
-          Criptografar
-        </button>
-        <button class="btn-descriptar">
-          Descriptografar
-        </button>
+
+      <div class="final-default">
+        <section class="final">
+          <div>
+            <label for="final-output">Resultado</label>
+            <textarea type="text" id="final-output" class="output-final" wrap="hard" ></textarea>
+
+            <button class="btn-copy">Copiar</button>
+          </div>
+        </section>
       </div>
-    </section>
-  
-    <section>
-      <textarea class="mensagem" cols="20" rows="10"></textarea>
-  
-      <button class="btn-copy">
-          Copiar
-      </button>
-    </section>
+    </div>
   </main>
 
+  <footer>
+    <p>Yan Corintima - 2023</p>
+  </footer>
   
 </body>
 </html>
